@@ -1,4 +1,24 @@
+
+Command
+-----
+![Command](/screen/Command.png)
+
+Command 객체는 캡슐화 된 트랜잭션입니다. 
+
+작업 단위를 객체화 함으로써 실제 수행하는 부분에서 분리가 가능합니다
+
+Office 문서 편집을 보시면 "undo / redo" 기능이 Command 패턴으로 개발된 것입니다.
+
+또 Thread의 Runnable도 Command 의 일반적인 사레입니다.
+ 
+그래서 저는 ThreadPool 예제로 작성해 보았습니다. 
+
+
+
+
+
 # Design Patterns In Kotlin
+
 
 #### :warning: Check my newest project: [Introduction to Unit Testing with Kotlin](https://github.com/dbacinski/Android-Testing-With-Kotlin/blob/master/docs/Unit-Testing-Introduction.md)
 
