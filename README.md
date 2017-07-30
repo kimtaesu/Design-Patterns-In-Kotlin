@@ -3,18 +3,21 @@
 -----
 ![Command](/screen/Command.png)
 
-Command 객체는 캡슐화 된 트랜잭션입니다. 
+```kotlin
 
+Command 객체는 캡슐화 된 트랜잭션
 
-
-Office 문서 편집을 보시면 "undo / redo" 기능이 Command 패턴으로 개발된 것입니다.
-
-또 Thread의 Runnable도 Command 의 일반적인 사레입니다.
- 
-그래서 저는 ThreadPool 예제로 작성해 보았습니다. 
+활용 방안 : 스케쥴링, 로그 기록 시스템, undo / redo
 
 Pros : 
- * 작업 단위를 객체화 함으로써 실제 수행하는 부분에서 분리가 가능합니다
+ * Client는 Command 의 세부적인 구현체를 알지 못해도 상관없다.
+ * 기존 코드를 변경하지 않고 새로운 명령을 추가 할 수 있기 때문에 확장성 측면에서 도움이 됩니다
+ * undo / redo 기능으로 재사용이 가능합니다
+Cons : 
+ * 각 개별 명령에 대한 클래스 수가 증가한다.
+
+```
+
 
 [State](/src/main/kotlin/taesu/State.kt)
 -----
