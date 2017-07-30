@@ -23,11 +23,16 @@ Cons :
 -----
 ![State](/screen/State.png)
 
-Context 에 의하여 상태의 변경이 되며, 변경된 상태에 따라 행위가 바뀌게 됩니다.
+내부 상태에 따라 객체의 동작을 변경할 수 있습니다.
+
+활용 방안 : 
+ * BlueBirdService 가 실행 중 / 실행 중이지 않음 상태를 관리하여 Action을 취할 수 있음.
 
 Pros : 
- * Context 라는 한 곳에서 상태 관리가 되기 때문에 유지하기가 쉽습니다. 
- * Client 는 상태 전환에 신경 쓰지 않아도 됩니다. 
+ * 상태 관리가 "Context" 라는 한 곳에서 관리 되기 때문에 유지하기가 쉽다.
+ * Client State 관리하는 Point 를 신경쓰지 않아도 된다.
+Cons : 
+ * Runtime 시에 상태가 변경되므로 Debug 가 힘들다. 
  
  [Visitor](/src/main/kotlin/taesu/Visitor.kt)
  -----
