@@ -1,20 +1,27 @@
+// Product
 interface Currency {
     val code: String
 }
 
+
+// Concreate Product
 class Euro(override val code: String = "EUR") : Currency
+
+// Concreate Product
 class UnitedStatesDollar(override val code: String = "USD") : Currency
+
 
 enum class Country {
     UnitedStates, Spain, UK, Greece
 }
 
+// ConcreateCreator
 class CurrencyFactory {
     fun currencyForCountry(country: Country): Currency? {
         when (country) {
             Country.Spain, Country.Greece -> return Euro()
-            Country.UnitedStates          -> return UnitedStatesDollar()
-            else                          -> return null
+            Country.UnitedStates -> return UnitedStatesDollar()
+            else -> return null
         }
     }
 }

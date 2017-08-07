@@ -10,7 +10,8 @@ Command 객체는 캡슐화 된 트랜잭션
 활용 방안 : 스케쥴링, 로그 기록 시스템, undo / redo
 
 Pros : 
- * Client는 Command 의 세부적인 구현체를 알지 못해도 상관없다.
+ * "Invoker"는 Command 의 세부적인 구현체를 알지 못해도 상관없다.
+// * Client는 Command 의 세부적인 구현체를 알지 못해도 상관없다.
  * 기존 코드를 변경하지 않고 새로운 명령을 추가 할 수 있기 때문에 확장성 측면에서 도움이 됩니다
  * undo / redo 기능으로 재사용이 가능합니다
 Cons : 
@@ -45,8 +46,36 @@ Cons :
 
 Pros : 
  * Visitor를 통해 관련된 오퍼레이션을 하나로 모아 관련되지 않은 오퍼레이션과 분리할 수 있다
- * 
 Cons : 
  * 대상 객체가 추가 될때마다 비지터에도 추가를 해줘야 한다.
  * 캡슐화가 약해진다. 요소의 내부 상태에 접근하는 데 필요한 오퍼레이션들을 모두 공개 인터페이스로 만들것을 강요하게 됨. 
 ````
+
+
+ [FactoryMethod](/src/main/kotlin/FactoryMethod.kt)
+ -----
+ ![FactoryMethod](/screen/FactoryMethod.png)
+ 
+ 
+ [AbstractFactory](/src/main/kotlin/AbstractFactory.kt)
+ -----
+ ![AbstractFactory](/screen/AbstractFactory.png)
+ 
+```` 
+사용 사례 : 
+	Iterator i = c.iterator();
+
+
+	 URL home = new URL("http:llwww.holub.com"); 
+	 URLConnection c = home.getConnection();  
+	 InputStream in = c.getinput();
+
+````
+
+Kotlin 문법 : [reified](/src/main/kotlin/reified.kt)
+  
+  inline fun `<reified T : Plant>`
+
+  reified는 inline fun 에서만 사용하는 것을 제한하고 있습니다.
+  
+  뜻 풀이로 "구체화된" 이란 의미로 때때로 매개 변수로 전달 된 유형에 액세스해야합니다.
