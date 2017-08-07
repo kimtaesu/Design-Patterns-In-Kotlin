@@ -93,6 +93,8 @@ Kotlin 문법 : [reified](/src/main/kotlin/reified.kt)
 
 Kotlin 문법 : 
   get(), set()
+ 
+  Backing field를 이용하여 처리함으로 값에 대한 validation 후 값을 초기화하거나, return 할 수 있습니다.
   
 
  [Decorator](/src/main/kotlin/Decorator.kt)
