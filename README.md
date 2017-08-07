@@ -96,6 +96,7 @@ Kotlin 문법 :
  
   Backing field를 이용하여 처리함으로 값에 대한 validation 후 값을 초기화하거나, return 할 수 있습니다.
   
+  println을 사용하여 get(), set() 이 어느 시점에 호출되는 지 확인 해보죠.
 
  [Decorator](/src/main/kotlin/Decorator.kt)
  -----

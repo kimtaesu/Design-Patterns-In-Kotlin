@@ -10,7 +10,10 @@ class CelsiusTemperature(override var temperature: Double) : Temperature
 class FahrenheitTemperature(var celsiusTemperature: CelsiusTemperature) : Temperature {
 
     override var temperature: Double
-        get() = convertCelsiusToFahrenheit(celsiusTemperature.temperature)
+        get() {
+            println("call get() ${convertCelsiusToFahrenheit(celsiusTemperature.temperature)}")
+            return convertCelsiusToFahrenheit(celsiusTemperature.temperature)
+        }
         set(temperatureInF) {
             println("call set(temperatureInF) ${temperatureInF}")
             celsiusTemperature.temperature = convertFahrenheitToCelsius(temperatureInF)
