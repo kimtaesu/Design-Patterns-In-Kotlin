@@ -79,3 +79,17 @@ Kotlin 문법 : [reified](/src/main/kotlin/reified.kt)
   reified는 inline fun 에서만 사용하는 것을 제한하고 있습니다.
   
   뜻 풀이로 "구체화된" 이란 의미로 때때로 매개 변수로 전달 된 유형에 액세스해야합니다.
+  
+
+ [Adapter](/src/main/kotlin/Adapter.kt)
+ -----
+ ![Adapter](/screen/Adapter.png)
+ 
+```` 
+사용 사례 : 
+	InputStream in = new StringinputStream("hello");
+
+````
+
+Kotlin 문법 : 
+  get(), set()

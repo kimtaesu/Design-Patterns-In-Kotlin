@@ -1,9 +1,12 @@
+// Adapter
 interface Temperature {
     var temperature: Double
 }
 
+// Adaptee
 class CelsiusTemperature(override var temperature: Double) : Temperature
 
+// Target
 class FahrenheitTemperature(var celsiusTemperature: CelsiusTemperature) : Temperature {
 
     override var temperature: Double
