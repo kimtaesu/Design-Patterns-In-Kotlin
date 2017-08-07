@@ -1,8 +1,10 @@
+// Component
 interface CoffeeMachine {
     fun makeSmallCoffee()
     fun makeLargeCoffee()
 }
 
+// Concreate Component
 class NormalCoffeeMachine : CoffeeMachine {
     override fun makeSmallCoffee() = println("Normal: Making small coffee")
 
@@ -10,7 +12,8 @@ class NormalCoffeeMachine : CoffeeMachine {
 }
 
 //Decorator:
-class EnhancedCoffeeMachine(val coffeeMachine: CoffeeMachine) : CoffeeMachine by coffeeMachine {
+class EnhancedCoffeeMachine(val coffeeMachine: CoffeeMachine)
+    : CoffeeMachine by coffeeMachine {
 
     // overriding behaviour
     override fun makeLargeCoffee() {

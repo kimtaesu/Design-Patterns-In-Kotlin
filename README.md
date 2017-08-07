@@ -93,3 +93,21 @@ Kotlin 문법 : [reified](/src/main/kotlin/reified.kt)
 
 Kotlin 문법 : 
   get(), set()
+  
+
+ [Decorator](/src/main/kotlin/Decorator.kt)
+ -----
+ ![Decorator](/screen/Decorator.png)
+ 
+```` 
+사용 사례 : 
+	InputStream in= new FileinputStream("x.txt"); 
+	in =new BufferedinputStream( in );
+	in =new PushBackinputStream( in );
+
+````
+Component Method 가 많은면 Decorator 쪽에서 Method chain 하는 작업이 귀찮음.
+
+Kotlin 문법 : 
+class EnhancedCoffeeMachine(val coffeeMachine: CoffeeMachine)
+    : CoffeeMachine by coffeeMachine {
