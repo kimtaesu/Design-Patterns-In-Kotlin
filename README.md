@@ -54,7 +54,7 @@ Cons :
 
  [FactoryMethod](/src/main/kotlin/FactoryMethod.kt)
  -----
- ![FactoryMethod](/screen/FactoryMethod.png)
+ ![FactoryMethod](/screen/FactoryMethod.jpg)
  
  
  [AbstractFactory](/src/main/kotlin/AbstractFactory.kt)
