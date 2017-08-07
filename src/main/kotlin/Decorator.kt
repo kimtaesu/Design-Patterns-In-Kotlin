@@ -29,12 +29,28 @@ class EnhancedCoffeeMachine(val coffeeMachine: CoffeeMachine)
     }
 }
 
+////Decorator:
+//class EnhancedCoffeeMachineTest(val coffeeMachine: CoffeeMachine)
+//    : CoffeeMachine {
+//
+//    // overriding behaviour
+//    override fun makeLargeCoffee() {
+//        println("Enhanced: Making large coffee")
+//        coffeeMachine.makeLargeCoffee()
+//    }
+//}
+
 fun main(args: Array<String>) {
     val normalMachine = NormalCoffeeMachine()
     val enhancedMachine = EnhancedCoffeeMachine(normalMachine)
 
+    println(normalMachine)
+    println(enhancedMachine)
+
+
     // non-overridden behaviour
     enhancedMachine.makeSmallCoffee()
+
     // overriding behaviour
     enhancedMachine.makeLargeCoffee()
     // extended behaviour

@@ -106,8 +106,16 @@ Kotlin 문법 :
 	in =new PushBackinputStream( in );
 
 ````
-Component Method 가 많은면 Decorator 쪽에서 Method chain 하는 작업이 귀찮음.
 
-Kotlin 문법 : 
+Kotlin 문법 : Class Delegation
+
 class EnhancedCoffeeMachine(val coffeeMachine: CoffeeMachine)
-    : CoffeeMachine by coffeeMachine {
+    : CoffeeMachine **by** coffeeMachine {
+
+만약 자바로 작성했다면 Component Method 전체를 구현하고 
+위임했어야 했다. 그러나 Kotlin 에서는  Class Delegation으로 불필요한 
+Boilerplate Code 를 작성하지 않아도 된다.
+
+ ![DecoratorKotlin](/screen/Decorator_by.png)
+ 
+ 
